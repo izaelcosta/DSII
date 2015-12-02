@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ECO Feedback - Pontos de Coleta</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="fade-in">
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">ECO Feedback</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav"> 
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Admin <b class="caret"></b></a>
+                    <ul class="dropdown-menu">                       
+                        <li>
+                            <a href="index.html"><i class="fa fa-fw fa-power-off"></i> Sair</a>
+                        </li>
+                        <li>
+                            <a href="usuarios.html"><i class="fa fa-fw fa-user"></i>Usuários</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="dashboard.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="relatorios.html"><i class="fa fa-fw fa-bar-chart-o"></i> Relatórios</a>
+                    </li>
+                    <li>
+                        <a href="status.html"><i class="fa fa-fw fa-trash"></i> Status</a>
+                    </li>
+                    <li>
+                        <a href="rotas.html"><i class="fa fa-fw fa-truck"></i> Rotas</a>
+                    </li>
+
+                    <li class="active">
+                        <a href="pontoscoleta.html"><i class="fa fa-fw fa-recycle"></i> Pontos de Coleta</a>
+                    </li>     
+                    <li>
+                        <a href="ranking.html"><i class="fa fa-fw fa-trophy"></i> Ranking</a>
+                    </li>             
+                   <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-wrench"></i> Editar <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="editarsetor.html">Setor</a>
+                            </li>
+                            <li>
+                                <a href="editarponto.html">Ponto de Coleta</a>
+                            </li>
+                        </ul>
+                    </li>               
+                    
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="fa fa-fw fa-sign-in"></i> Cadastrar <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo2" class="collapse">
+                            <li>
+                                <a href="cadastrarsetor.html">Setor</a>
+                            </li>
+                            <li>
+                                <a href="cadastrarponto.html">Ponto de Coleta</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Pontos de Coleta <small>Descrição dos pontos de coleta</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <i class="fa fa-recycle"></i> Pontos de Coleta
+                            </li>
+                        </ol>
+
+            <!-- /.row -->
+    
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-white">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <img src="img/imd.png" alt="IMD"></a>
+                                        <br><br>                      
+                                        <img src="img/badges.png" alt="Badges"></a> 
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                    <div class="kindahuge">Pontos de coleta</div>
+                                        <br><br>
+                                        <div class="huge">5</div>           
+                                    </div>
+
+                                    <div id="myModal1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                           
+                                                
+                                               
+                                            <div class="col-xs-12">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title"><i class="fa fa-recycle fa-fw"></i> Pontos de Coleta</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-bordered table-hover table-striped">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>#</th>
+                                                                        <th>Local</th>
+                                                                        <th>Capacidade</th>
+                                                                        <th>Em uso</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td>1º andar</td>
+                                                                        <td>100kg</td>
+                                                                        <td>90%</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>2</td>
+                                                                        <td>2º andar</td>
+                                                                        <td>100kg</td>
+                                                                        <td>10%</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>3</td>
+                                                                        <td>3º andar</td>
+                                                                        <td>100kg</td>
+                                                                        <td>50%</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>4</td>
+                                                                        <td>Estacionamento</td>
+                                                                        <td>100kg</td>
+                                                                        <td>30%</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>5</td>
+                                                                        <td>Cantina</td>
+                                                                        <td>100kg</td>
+                                                                        <td>85%</td>
+                                                                    </tr>            
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#myModal1">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Ver Detalhes</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-white">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <img src="img/dce.png" alt="DCE"></a>
+                                          <br><br>                      
+                                        <img src="img/badges.png" alt="Badges"></a> 
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="kindahuge">Pontos de coleta</div>
+                                        <br><br>
+                                        <div class="huge">1</div> 
+                                    </div>
+
+
+                                    <div id="myModal2" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                           
+                                                
+                                               
+                                            <div class="col-xs-12">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title"><i class="fa fa-recycle fa-fw"></i> Pontos de Coleta</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-bordered table-hover table-striped">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>#</th>
+                                                                        <th>Local</th>
+                                                                        <th>Capacidade</th>
+                                                                        <th>Em uso</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td>Cantina</td>
+                                                                        <td>100kg</td>
+                                                                        <td>20%</td>
+                                                                    </tr>                                                                    
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#myModal2">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Ver Detalhes</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-white">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <img src="img/cchla.png" alt="CCHLA"></a>
+                                          <br><br>                      
+                                        <img src="img/badges.png" alt="Badges"></a> 
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="kindahuge">Pontos de coleta</div>
+                                        <br><br>
+                                        <div class="huge">2</div>
+                                    </div>
+
+                                    <div id="myModal3" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                           
+                                                
+                                               
+                                            <div class="col-xs-12">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title"><i class="fa fa-recycle fa-fw"></i> Pontos de Coleta</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-bordered table-hover table-striped">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>#</th>
+                                                                        <th>Local</th>
+                                                                        <th>Capacidade</th>
+                                                                        <th>Em uso</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td>Cantina</td>
+                                                                        <td>100kg</td>
+                                                                        <td>20%</td>
+                                                                    </tr>                                                                    
+                                                                    <tr>
+                                                                        <td>2</td>
+                                                                        <td>Estacionamento</td>
+                                                                        <td>100kg</td>
+                                                                        <td>30%</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#myModal3">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Ver Detalhes</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-white">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <img src="img/ccsa.png" alt="CCSA"></a>
+                                          <br><br>                      
+                                        <img src="img/badges.png" alt="Badges"></a> 
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="kindahuge">Pontos de coleta</div>
+                                        <br><br>
+                                        <div class="huge">2</div>
+                                    </div>
+
+                                <div id="myModal4" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                           
+                                                
+                                               
+                                            <div class="col-xs-12">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h3 class="panel-title"><i class="fa fa-recycle fa-fw"></i> Pontos de Coleta</h3>
+                                                    </div>
+                                                    <div class="panel-body">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-bordered table-hover table-striped">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>#</th>
+                                                                        <th>Local</th>
+                                                                        <th>Capacidade</th>
+                                                                        <th>Em uso</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td>Corredor 1</td>
+                                                                        <td>100kg</td>
+                                                                        <td>40%</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>1</td>
+                                                                        <td>Corredor 2</td>
+                                                                        <td>100kg</td>
+                                                                        <td>70%</td>
+                                                                    </tr>                                                                     
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <a href="#" data-toggle="modal" data-target="#myModal4">
+                                <div class="panel-footer">
+                                    <span class="pull-left">Ver Detalhes</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                    </div>
+                </div>                              
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script>
+
+</body>
+
+</html>

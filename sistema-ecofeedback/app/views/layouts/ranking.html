@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>ECO Feedback - Editar</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="fade-in">
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">ECO Feedback</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav"> 
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Admin <b class="caret"></b></a>
+                    <ul class="dropdown-menu">                       
+                        <li>
+                            <a href="index.html"><i class="fa fa-fw fa-power-off"></i> Sair</a>
+                        </li>
+                        <li>
+                            <a href="usuarios.html"><i class="fa fa-fw fa-user"></i>Usuários</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="dashboard.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="relatorios.html"><i class="fa fa-fw fa-bar-chart-o"></i> Relatórios</a>
+                    </li>
+                    <li>
+                        <a href="status.html"><i class="fa fa-fw fa-trash"></i> Status</a>
+                    </li>
+                    <li>
+                        <a href="rotas.html"><i class="fa fa-fw fa-truck"></i> Rotas</a>
+                    </li>
+
+                    <li>
+                        <a href="pontoscoleta.html"><i class="fa fa-fw fa-recycle"></i> Pontos de Coleta</a>
+                    </li>       
+                    <li class="active">
+                        <a href="ranking.html"><i class="fa fa-fw fa-trophy"></i> Ranking</a>
+                    </li>           
+                   <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-wrench"></i> Editar <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="editarsetor.html">Setor</a>
+                            </li>
+                            <li>
+                                <a href="editarponto.html">Ponto de Coleta</a>
+                            </li>
+                        </ul>
+                    </li>               
+                    
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="fa fa-fw fa-sign-in"></i> Cadastrar <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo2" class="collapse">
+                            <li>
+                                <a href="cadastrarsetor.html">Setor</a>
+                            </li>
+                            <li>
+                                <a href="cadastrarponto.html">Ponto de Coleta</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Ranking <small>Descrição</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <i class="fa fa-trophy"></i> Ranking
+                            </li>
+                        </ol>
+                <!-- /.trofeu -->
+                <div class="row">
+                    <div class="col-lg-3 cold-lg-offset-1 text-center">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="trophy">
+                                    <img src="img/trophy.png" alt="Troféu"></a>
+                                </div> 
+                            </div>
+                            <div class="panel-body">
+                                <div><h3>Setor com melhor desempenho</h3></div>
+                                <img src="img/imd.png" alt="IMD"></a>
+                                <br><br><br>                         
+                                <div><h4>237kg recolhidos!</h4></div>
+                                 <br><br>
+                                <div><h5>37kg - Plástico</h5></div>
+                                <div><h5>100kg - Orgânico</h5></div>
+                                <div><h5>30kg - Papel</h5></div>
+                                <div><h5>50kg - Metal</h5></div>
+                                <div><h5>20kg - Vidro</h5></div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- /.trofeu -->
+                <!-- /.exclamacao -->
+                    <div class="col-lg-3 cold-lg-offset-1 text-center">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="exclamation">
+                                    <img src="img/warning.png" alt="Exclamação"></a>
+                                </div> 
+                            </div>
+                            <div class="panel-body">
+                                <div><h3>Setor com pior desempenho</h3></div>
+                                <img src="img/dce.png" alt="DCE"></a>
+                                <br><br><br>                         
+                                <div><h4>50kg recolhidos!</h4></div>
+                                 <br><br>
+                                <div><h5>30kg - Plástico</h5></div>
+                                <div><h5>0kg - Orgânico</h5></div>
+                                <div><h5>20kg - Papel</h5></div>
+                                <div><h5>0kg - Metal</h5></div>
+                                <div><h5>0kg - Vidro</h5></div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- /.exclamacao -->
+                <!-- /.up -->
+                    <div class="col-lg-3 cold-lg-offset-1 text-center">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="up">
+                                    <img src="img/up.png" alt="Up"></a>
+                                </div> 
+                            </div>
+                            <div class="panel-body">
+                                <div><h3>Setor em ascenção</h3></div>
+                                <img src="img/cchla.png" alt="CCHLA"></a>
+                                <br><br><br>                         
+                                <div><h4>57kg recolhidos!</h4></div>
+                                <div><h5>Última contagem: 31kg</h5></div>
+                                <div><h3>26kg a mais!</h3></div> 
+                                <br><br>
+                                <div><h5>37kg - Plástico</h5></div>
+                                <div><h5>0kg - Orgânico</h5></div>
+                                <div><h5>20kg - Papel</h5></div>
+                                <div><h5>0kg - Metal</h5></div>
+                                <div><h5>0kg - Vidro</h5></div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- /.up -->
+                <!-- /.down -->
+                    <div class="col-lg-3 cold-lg-offset-1 text-center">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="down">
+                                    <img src="img/down.png" alt="Down"></a>
+                                </div> 
+                            </div>
+                            <div class="panel-body">
+                                <div><h3>Setor em declínio</h3></div>
+                                <img src="img/ccsa.png" alt="CCSA"></a>
+                                <br><br><br>                         
+                                <div><h4>75kg recolhidos!</h4></div>
+                                <div><h5>Última contagem: 105kg</h5></div>
+                                <div><h3>30kg a menos!</h3></div> 
+                                <br><br>
+                                <div><h5>5kg - Plástico</h5></div>
+                                <div><h5>20kg - Orgânico</h5></div>
+                                <div><h5>0kg - Papel</h5></div>
+                                <div><h5>25kg - Metal</h5></div>
+                                <div><h5>25kg - Vidro</h5></div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- /.down -->
+
+
+                </div>
+                <!-- /.trofeu coluna 1-->
+
+   
+
+
+                    </div>
+                </div>                              
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script>
+
+</body>
+
+</html>

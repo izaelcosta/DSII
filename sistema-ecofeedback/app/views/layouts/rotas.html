@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ECO Feedback - Rotas</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="css/plugins/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body class="fade-in">
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">ECO Feedback</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav"> 
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Admin <b class="caret"></b></a>
+                    <ul class="dropdown-menu">                       
+                        <li>
+                            <a href="index.html"><i class="fa fa-fw fa-power-off"></i> Sair</a>
+                        </li>
+                        <li>
+                            <a href="usuarios.html"><i class="fa fa-fw fa-user"></i>Usuários</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="dashboard.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="relatorios.html"><i class="fa fa-fw fa-bar-chart-o"></i> Relatórios</a>
+                    </li>
+                    <li>
+                        <a href="status.html"><i class="fa fa-fw fa-trash"></i> Status</a>
+                    </li>
+                    <li class="active">
+                        <a href="rotas.html"><i class="fa fa-fw fa-truck"></i> Rotas</a>
+                    </li>
+
+                    <li>
+                        <a href="pontoscoleta.html"><i class="fa fa-fw fa-recycle"></i> Pontos de Coleta</a>
+                    </li>       
+                    <li>
+                        <a href="ranking.html"><i class="fa fa-fw fa-trophy"></i> Ranking</a>
+                    </li>           
+                   <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-wrench"></i> Editar <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="editarsetor.html">Setor</a>
+                            </li>
+                            <li>
+                                <a href="editarponto.html">Ponto de Coleta</a>
+                            </li>
+                        </ul>
+                    </li>               
+                    
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#demo2"><i class="fa fa-fw fa-sign-in"></i> Cadastrar <i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="demo2" class="collapse">
+                            <li>
+                                <a href="cadastrarsetor.html">Setor</a>
+                            </li>
+                            <li>
+                                <a href="cadastrarponto.html">Ponto de Coleta</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Rotas <small>Descrição</small>
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <i class="fa fa-truck"></i> Rotas
+                            </li>
+                        </ol>
+
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                
+
+                                <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-clock-o fa-fw"></i> Detalhes</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">agora</span> 
+                                        <strong>Origem:</strong> Escola de Música 
+                                        <br>
+                                        <strong>Destino:</strong> IMD
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">4 minutos atrás</span>
+                                        <strong>Origem:</strong> Reitoria 
+                                        <br>
+                                        <strong>Destino:</strong> Escola de Música
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">23 minutos atrás</span>
+                                        <strong>Origem:</strong> CCET 
+                                        <br>
+                                        <strong>Destino:</strong> Reitoria
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">46 minutos atrás</span>
+                                        <strong>Origem:</strong> Centro de Convivência 
+                                        <br>
+                                        <strong>Destino:</strong> CCET
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">1 hora atrás</span>
+                                        <strong>Origem:</strong> CCSA 
+                                        <br>
+                                        <strong>Destino:</strong> Centro de Convivência
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">2 horas atrás</span>
+                                        <strong>Origem:</strong> DCE 
+                                        <br>
+                                        <strong>Destino:</strong> CCSA
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">ontem</span>
+                                        <strong>Origem:</strong> ECT 
+                                        <br>
+                                        <strong>Destino:</strong> DCE
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <span class="badge">2 dias atrás</span>
+                                        <strong>Origem:</strong> CCHLA 
+                                        <br>
+                                        <strong>Destino:</strong> ECT
+                                    </a>
+                                </div>
+                                <div class="text-right">
+                                    <a href="#">Ver todos os trajetos <i class="fa fa-arrow-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="embed-responsive embed-responsive-16by9">                                
+                                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3969.153418733762!2d-35.21094968464204!3d-5.833985809134243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x0%3A0x20c4bb30f68e7bc3!2sEscola+de+Musica+da+UFRN!3m2!1d-5.8374763!2d-35.2065345!4m5!1s0x7b2ff8566c6f767%3A0x511b331db415f813!2sCIVT+-+Centro+Integrado+de+Voca%C3%A7%C3%A3o+Tecnol%C3%B3gica+-+Lagoa+Nova%2C+Natal+-+RN!3m2!1d-5.8321987!2d-35.2054739!5e0!3m2!1spt-BR!2sbr!4v1448831032392"></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>                              
+
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script>
+
+</body>
+
+</html>
